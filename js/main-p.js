@@ -1,8 +1,7 @@
 // Graphic experiment using p5.js
 
 // Globals
-var states, flags = [],
-    img;
+var states, flags = [];
 
 // loadJSON callback
 function statesCallback(response) {

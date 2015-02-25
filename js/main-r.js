@@ -1,7 +1,7 @@
 // Graphic experiment using Raphael.js
 
 // Globals
-var states, flags = [], img;
+var states, flags = [];
 var ww = window.innerWidth;
 var wh = window.innerHeight * 3;
 
@@ -35,7 +35,7 @@ function setup(){
   r.rect(ww / 2, wh / 2, ww / 2 - 10, wh / 2 - 10, 10).attr({ stroke: "#006", fill: "#004" });
 
   // Draw title
-  r.text(ww * 0.7, 50, "US State Flags").attr({ fill: "#fff", "font-size": 32 });
+  r.text(ww * 0.7, 50, "US State Flags").attr({ fill: "#fff", "font-size": 36 });
 }
 
 function draw(){
@@ -75,14 +75,24 @@ function draw(){
     while (angle < 360) {
         var color = Raphael.getColor();
         (function(t, c) {
-            r.text(282, 1448, states[i].name).attr({
+            r.text(282, 1420, states[i].name).attr({ 
                 fill: "#fff",
                 "font-size": 16,
                 transform: t + "r90",
                 "text-anchor": "start"
+            }).mouseover(function() {
+                this.animate({
+                fill: c,
+                "font-size": 28
+                }, 200);
+            }).mouseout(function() {
+                this.animate({
+                fill: "#fff",
+                "font-size": 16
+                }, 500);
             });
 
-            r.circle(280, 1450, 10).attr({
+            r.circle(280, 1400, 10).attr({ 
                 stroke: c,
                 fill: c,
                 transform: t,
