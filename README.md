@@ -26,6 +26,6 @@ Works cross browser
 
 ###### Node.js example
 - Navigate via Command Line to the project root
-- npm install http-server -g
+- run `npm install http-server -g`
 - run `node http-server`
 - Open `localhost:8080/p5.html` and/or `localhost:8080/raphael.html` in your browser to see samples
