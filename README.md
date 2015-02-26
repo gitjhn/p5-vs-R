@@ -11,5 +11,15 @@ The Raphael example was built using a similar structure pattern to how p5 exampl
 
   * Processing - p5.js - http://p5js.org/
   * Raphael - raphael.js - http://raphaeljs.com/
-  
-  
+
+#Running Locally
+### Without Webserver
+Only Firefox is supported
+- Open p5.html and/or raphael.html in your browser to see samples
+
+### With Webserver
+Works cross browser
+###### Python example
+- Navigate via Command Line to the project root
+- run `python -m SimpleHTTPServer`
+- Open `localhost:8000/p5.html` and/or `localhost:8000/raphael.html` in your browser to see samples

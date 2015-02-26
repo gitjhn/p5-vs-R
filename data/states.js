@@ -1,4 +1,5 @@
-{ "States": [
+var flags = [];
+var states = [
 	{ "name": "Alabama", "imgname": "AL", "date": "1819", "capital": "Montgomery" },
 	{ "name": "Alaska", "imgname": "AK", "date": "1959", "capital": "Juneau" },
 	{ "name": "Arizona", "imgname": "AZ", "date": "1912", "capital": "Phoenix" },
@@ -49,5 +50,4 @@
 	{ "name": "West Virginia", "imgname": "WV", "date": "1863", "capital": "Charleston" },
 	{ "name": "Wisconsin", "imgname": "WI", "date": "1848", "capital": "Madison" },
 	{ "name": "Wyoming", "imgname": "WY", "date": "1890", "capital": "Cheyenne" }
-	]
-}
+	];

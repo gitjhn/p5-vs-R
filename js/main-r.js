@@ -1,7 +1,6 @@
 // Graphic experiment using Raphael.js
 
 // Globals
-var states, flags = [];
 var ww = window.innerWidth;
 var wh = window.innerHeight * 3;
 
@@ -10,24 +9,19 @@ var r = Raphael(0, 0, ww, wh);
 
 setup();
 
-// loadJSON callback
-function statesCallback(response) {
-    states = response.States;
-
+function loadFlags() {
     // Loads flag images
     for (var i = states.length - 1; i >= 0; i--) {
         flags[i] = new Image();
         flags[i].src = 'images/state_flags/' + states[i].imgname + '.png';
         flags[i].style.display = "none";
-    };
+    }
 
     flags[0].onload = draw;
 }
 
 function setup(){
-  var url = 'data/states.json';
-  loadJSON ( url, statesCallback );
-
+  loadFlags();
   // Draw red border
   r.rect(5, 5, ww - 10, wh - 10, 10).attr({ stroke: "#600" });
 

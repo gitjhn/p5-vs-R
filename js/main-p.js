@@ -1,22 +1,13 @@
 // Graphic experiment using p5.js
 
-// Globals
-var states, flags = [];
-
-// loadJSON callback
-function statesCallback(response) {
-    states = response.States;
-
-    // load flag images
-    for (var i = states.length - 1; i >= 0; i--) {
-        flags[i] = loadImage("images/state_flags/" + states[i].imgname + ".png");
-    };
+function loadFlags(){
+  for (var i = states.length - 1; i >= 0; i--) {
+    flags[i] = loadImage("images/state_flags/" + states[i].imgname + ".png");
+  }
 }
 
 function setup() {
-    var url = 'data/states.json';
-    loadJSON(url, statesCallback);
-
+    loadFlags();
     // Create the canvas
     createCanvas(windowWidth, 3000);
     background(0);
